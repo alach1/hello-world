@@ -10,79 +10,37 @@
       "_postman_id": "99367aaa-93e4-6af5-a184-c200e40a57f5",
       "name": "quotes",
       "description": "",
-      "item": []
-    },
-    {
-      "_postman_id": "0c75a497-ddab-ea84-7036-b199b291bf8d",
-      "name": "LastQuotes copy",
-      "event": [
+      "item": [
         {
-          "listen": "prerequest",
-          "script": {
-            "id": "05b7783c-429c-42eb-8103-82e08ac45105",
-            "type": "text/javascript",
-            "exec": [
-              "",
-              ""
-            ]
-          }
-        },
-        {
-          "listen": "test",
-          "script": {
-            "id": "38d83d4f-4024-43bc-9123-ce4825bf9188",
-            "type": "text/javascript",
-            "exec": [
-              "pm.test(\"Your test name\", function () {",
-              "    var jsonData = pm.response.json();",
-              "    pm.expect(jsonData.responses[0].instrumentIdentifierValue).to.eql(\"PLKGHM000017\");",
-              "});"
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Accept",
-            "value": "application/json"
-          },
-          {
-            "key": "x-signature",
-            "value": "{{signature}}"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"requests\": [\n    {\n      \"instrumentIdentifierName\": \"isin\",\n      \"instrumentIdentifierValue\": \"PLKGHM000017\",\n      \"exchangeIdentifierName\": \"MIC\",\n      \"exchangeIdentifierValue\": \"XWAR\",\n      \"dataSource\": \"Bankier\"\n    }\n  ],\n  \"zoneId\": \"Europe/Warsaw\"\n}"
-        },
-        "url": {
-          "raw": "{{publisher}}/api/v1/quotes/last?apiKey={{api-user}}",
-          "host": [
-            "{{publisher}}"
-          ],
-          "path": [
-            "api",
-            "v1",
-            "quotes",
-            "last"
-          ],
-          "query": [
-            {
-              "key": "apiKey",
-              "value": "{{api-user}}",
-              "equals": true
-            }
-          ]
-        },
-        "description": "Get LastQuotes"
-      },
-      "response": [
-        {
-          "id": "f5fa973f-8f3f-0c6a-2c0a-96400c22e47e",
+          "_postman_id": "0c75a497-ddab-ea84-7036-b199b291bf8d",
           "name": "LastQuotes copy",
-          "originalRequest": {
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "05b7783c-429c-42eb-8103-82e08ac45105",
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "38d83d4f-4024-43bc-9123-ce4825bf9188",
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Your test name\", function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.responses[0].instrumentIdentifierValue).to.eql(\"PLKGHM000017\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
             "method": "POST",
             "header": [
               {
@@ -116,58 +74,101 @@
                   "equals": true
                 }
               ]
-            }
+            },
+            "description": "Get LastQuotes"
           },
-          "status": "OK",
-          "code": 200,
-          "_postman_previewlanguage": "json",
-          "header": [
+          "response": [
             {
-              "key": "Access-Control-Allow-Origin",
-              "value": "*",
-              "name": "Access-Control-Allow-Origin",
-              "description": ""
-            },
-            {
-              "key": "Content-Length",
-              "value": "345",
-              "name": "Content-Length",
-              "description": ""
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/json; charset=UTF-8",
-              "name": "Content-Type",
-              "description": ""
-            },
-            {
-              "key": "Date",
-              "value": "Fri, 09 Feb 2018 09:34:08 GMT",
-              "name": "Date",
-              "description": ""
-            },
-            {
-              "key": "Server",
-              "value": "nginx/1.12.2",
-              "name": "Server",
-              "description": ""
-            },
-            {
-              "key": "X-API-Business-Transaction-ID",
-              "value": "e253d4cc-a4d3-4abf-bc21-58b7b5fcb8c4",
-              "name": "X-API-Business-Transaction-ID",
-              "description": ""
-            },
-            {
-              "key": "btId",
-              "value": "e253d4cc-a4d3-4abf-bc21-58b7b5fcb8c4",
-              "name": "btId",
-              "description": ""
+              "id": "f5fa973f-8f3f-0c6a-2c0a-96400c22e47e",
+              "name": "LastQuotes copy",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "x-signature",
+                    "value": "{{signature}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"requests\": [\n    {\n      \"instrumentIdentifierName\": \"isin\",\n      \"instrumentIdentifierValue\": \"PLKGHM000017\",\n      \"exchangeIdentifierName\": \"MIC\",\n      \"exchangeIdentifierValue\": \"XWAR\",\n      \"dataSource\": \"Bankier\"\n    }\n  ],\n  \"zoneId\": \"Europe/Warsaw\"\n}"
+                },
+                "url": {
+                  "raw": "{{publisher}}/api/v1/quotes/last?apiKey={{api-user}}",
+                  "host": [
+                    "{{publisher}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "quotes",
+                    "last"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "{{api-user}}",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "name": "Access-Control-Allow-Origin",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "345",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=UTF-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 09 Feb 2018 09:34:08 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "nginx/1.12.2",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-API-Business-Transaction-ID",
+                  "value": "e253d4cc-a4d3-4abf-bc21-58b7b5fcb8c4",
+                  "name": "X-API-Business-Transaction-ID",
+                  "description": ""
+                },
+                {
+                  "key": "btId",
+                  "value": "e253d4cc-a4d3-4abf-bc21-58b7b5fcb8c4",
+                  "name": "btId",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "201",
+              "body": "{\"responses\":[{\"instrumentIdentifierValue\":\"PLKGHM000017\",\"instrumentIdentifierName\":\"isin\",\"exchangeIdentifierValue\":\"XWAR\",\"exchangeIdentifierName\":\"MIC\",\"dataSource\":\"Bankier\",\"values\":[{\"open\":103.1,\"high\":103.2,\"low\":101.05,\"price\":102.55,\"volume\":20885092,\"date\":\"2018-02-09T10:12:00+01:00\",\"updateDate\":\"2018-02-09T10:32:04.38+01:00\"}]}]}"
             }
-          ],
-          "cookie": [],
-          "responseTime": "201",
-          "body": "{\"responses\":[{\"instrumentIdentifierValue\":\"PLKGHM000017\",\"instrumentIdentifierName\":\"isin\",\"exchangeIdentifierValue\":\"XWAR\",\"exchangeIdentifierName\":\"MIC\",\"dataSource\":\"Bankier\",\"values\":[{\"open\":103.1,\"high\":103.2,\"low\":101.05,\"price\":102.55,\"volume\":20885092,\"date\":\"2018-02-09T10:12:00+01:00\",\"updateDate\":\"2018-02-09T10:32:04.38+01:00\"}]}]}"
+          ]
         }
       ]
     },
