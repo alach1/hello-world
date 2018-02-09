@@ -34,7 +34,7 @@
                 "exec": [
                   "pm.test(\"Your test name\", function () {",
                   "    var jsonData = pm.response.json();",
-                  "    pm.expect(jsonData.responses[0].instrumentIdentifierValue).to.eql(\"PLKGHM000011\");",
+                  "    pm.expect(jsonData.responses[0].instrumentIdentifierValue).to.eql(\"PLKGHM000017\");",
                   "});"
                 ]
               }
