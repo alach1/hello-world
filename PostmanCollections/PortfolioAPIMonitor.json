@@ -7,6 +7,12 @@
   },
   "item": [
     {
+      "_postman_id": "99367aaa-93e4-6af5-a184-c200e40a57f5",
+      "name": "quotes",
+      "description": "",
+      "item": []
+    },
+    {
       "_postman_id": "0c75a497-ddab-ea84-7036-b199b291bf8d",
       "name": "LastQuotes copy",
       "event": [
