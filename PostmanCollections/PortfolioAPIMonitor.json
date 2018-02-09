@@ -24,12 +24,12 @@
         {
           "listen": "test",
           "script": {
-            "id": "2d8b5a2b-78d9-44ca-9085-3f6908a1053c",
+            "id": "38d83d4f-4024-43bc-9123-ce4825bf9188",
             "type": "text/javascript",
             "exec": [
               "pm.test(\"Your test name\", function () {",
               "    var jsonData = pm.response.json();",
-              "    pm.expect(jsonData.responses[0].instrumentIdentifierValue).to.eql(\"PLKGHM000011\");",
+              "    pm.expect(jsonData.responses[0].instrumentIdentifierValue).to.eql(\"PLKGHM000017\");",
               "});"
             ]
           }
