@@ -345,7 +345,7 @@
           "item": [
             {
               "_postman_id": "1ed6249e-24ed-ff14-e735-4a8660d86ceb",
-              "name": "LastAggregates copy",
+              "name": "LastAggregates",
               "event": [
                 {
                   "listen": "prerequest",
