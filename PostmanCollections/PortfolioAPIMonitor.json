@@ -697,6 +697,62 @@
             "description": null
           },
           "response": []
+        },
+        {
+          "_postman_id": "f038c6c9-edf5-589d-9fab-6f66e667b093",
+          "name": "Past total market value. copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "e36390ab-4d20-43f8-b9ea-802552f8989a",
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "x-signature",
+                "value": "{{signature}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{  \"endDate\":\"2017-12-12T00:00:00Z\",\n  \"startDate\": \"2016-01-01T00:00:00Z\",\n  \"aggregateType\": \"DAY\",\n  \"requests\": [\n      {\n        \"instrumentIdentifierValue\" : \"AT0000809058\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Palpatine\"\n      }\n    ]\n}"
+            },
+            "url": {
+              "raw": "{{publisher}}/api/v1/models/totalMarketValue/past?apiKey={{api-user}}",
+              "host": [
+                "{{publisher}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "models",
+                "totalMarketValue",
+                "past"
+              ],
+              "query": [
+                {
+                  "key": "apiKey",
+                  "value": "{{api-user}}",
+                  "equals": true
+                }
+              ]
+            },
+            "description": null
+          },
+          "response": []
         }
       ]
     },
@@ -711,62 +767,6 @@
       "name": "Mapping",
       "description": "",
       "item": []
-    },
-    {
-      "_postman_id": "f038c6c9-edf5-589d-9fab-6f66e667b093",
-      "name": "Past total market value. copy",
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "id": "e36390ab-4d20-43f8-b9ea-802552f8989a",
-            "type": "text/javascript",
-            "exec": [
-              "",
-              ""
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Accept",
-            "value": "application/json"
-          },
-          {
-            "key": "x-signature",
-            "value": "{{signature}}"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{  \"endDate\":\"2017-12-12T00:00:00Z\",\n  \"startDate\": \"2016-01-01T00:00:00Z\",\n  \"aggregateType\": \"DAY\",\n  \"requests\": [\n      {\n        \"instrumentIdentifierValue\" : \"AT0000809058\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Palpatine\"\n      }\n    ]\n}"
-        },
-        "url": {
-          "raw": "{{publisher}}/api/v1/models/totalMarketValue/past?apiKey={{api-user}}",
-          "host": [
-            "{{publisher}}"
-          ],
-          "path": [
-            "api",
-            "v1",
-            "models",
-            "totalMarketValue",
-            "past"
-          ],
-          "query": [
-            {
-              "key": "apiKey",
-              "value": "{{api-user}}",
-              "equals": true
-            }
-          ]
-        },
-        "description": null
-      },
-      "response": []
     },
     {
       "_postman_id": "b22fb447-8c96-9a63-f627-5b40a1dbe12d",
