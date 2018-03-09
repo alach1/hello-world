@@ -400,6 +400,64 @@
                 "description": "Get LastAggregates"
               },
               "response": []
+            },
+            {
+              "_postman_id": "e487c48f-75d8-9b8b-eb37-f99f4bf0b972",
+              "name": "PastAggregates copy",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "ecd814be-2dd5-42ca-be07-df2fe26a3233",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "x-signature",
+                    "value": "{{signature}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"requests\": [\n    {\n      \"instrumentIdentifierName\": \"isin\",\n      \"instrumentIdentifierValue\": \"PLKGHM000017\",\n      \"exchangeIdentifierName\": \"MIC\",\n      \"exchangeIdentifierValue\": \"XWAR\",\n      \"dataSource\": \"GPW\"\n    }\n  ],\n  \"aggregateType\": \"DAY\",\n  \"from\": \"2017-09-01\",\n  \"to\": \"2017-10-10\",\n  \"zoneId\": \"Europe/Warsaw\"\n}"
+                },
+                "url": {
+                  "raw": "{{publisher}}/api/v1/aggregates/past?apiKey={{api-user}}",
+                  "host": [
+                    "{{publisher}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "aggregates",
+                    "past"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "{{api-user}}",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "Get PastAggregates"
+              },
+              "response": []
             }
           ],
           "_postman_isSubFolder": true
@@ -423,64 +481,6 @@
       "name": "Mapping",
       "description": "",
       "item": []
-    },
-    {
-      "_postman_id": "e487c48f-75d8-9b8b-eb37-f99f4bf0b972",
-      "name": "PastAggregates copy",
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "id": "ecd814be-2dd5-42ca-be07-df2fe26a3233",
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Accept",
-            "value": "application/json"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          },
-          {
-            "key": "x-signature",
-            "value": "{{signature}}"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"requests\": [\n    {\n      \"instrumentIdentifierName\": \"isin\",\n      \"instrumentIdentifierValue\": \"PLKGHM000017\",\n      \"exchangeIdentifierName\": \"MIC\",\n      \"exchangeIdentifierValue\": \"XWAR\",\n      \"dataSource\": \"GPW\"\n    }\n  ],\n  \"aggregateType\": \"DAY\",\n  \"from\": \"2017-09-01\",\n  \"to\": \"2017-10-10\",\n  \"zoneId\": \"Europe/Warsaw\"\n}"
-        },
-        "url": {
-          "raw": "{{publisher}}/api/v1/aggregates/past?apiKey={{api-user}}",
-          "host": [
-            "{{publisher}}"
-          ],
-          "path": [
-            "api",
-            "v1",
-            "aggregates",
-            "past"
-          ],
-          "query": [
-            {
-              "key": "apiKey",
-              "value": "{{api-user}}",
-              "equals": true
-            }
-          ]
-        },
-        "description": "Get PastAggregates"
-      },
-      "response": []
     },
     {
       "_postman_id": "0246c01b-5df6-cdb3-5331-164a6017fa11",
