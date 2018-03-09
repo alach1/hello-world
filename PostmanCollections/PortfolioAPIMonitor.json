@@ -700,7 +700,7 @@
         },
         {
           "_postman_id": "f038c6c9-edf5-589d-9fab-6f66e667b093",
-          "name": "Past total market value. copy",
+          "name": "Past total market value",
           "event": [
             {
               "listen": "prerequest",
