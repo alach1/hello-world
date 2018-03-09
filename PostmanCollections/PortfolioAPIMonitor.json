@@ -523,66 +523,6 @@
             "description": null
           },
           "response": []
-        },
-        {
-          "_postman_id": "b9840625-1587-5739-4472-5512d0c8aac5",
-          "name": "Portfolio standard deviation copy",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "b8b799eb-1208-4e34-9f42-238269dd1015",
-                "type": "text/javascript",
-                "exec": [
-                  "",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "x-signature",
-                "value": "{{signature}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"requests\": [\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n                {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600012\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCA00016\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCgA00016\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2000.0\n    },\n        {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCA00016\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        }\n      ],\n      \"nav\":2000.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCAg00016\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    }\n  ],\n  \"period\": \"OTHER\",\n  \"startDate\": \"2017-07-01\",\n  \"endDate\": \"2017-09-30\"\n}"
-            },
-            "url": {
-              "raw": "{{publisher}}/api/v1/models/standardDeviation/portfolio?apiKey={{api-user}}",
-              "host": [
-                "{{publisher}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "models",
-                "standardDeviation",
-                "portfolio"
-              ],
-              "query": [
-                {
-                  "key": "apiKey",
-                  "value": "{{api-user}}",
-                  "equals": true
-                }
-              ]
-            },
-            "description": null
-          },
-          "response": []
         }
       ]
     },
@@ -597,6 +537,66 @@
       "name": "Mapping",
       "description": "",
       "item": []
+    },
+    {
+      "_postman_id": "b9840625-1587-5739-4472-5512d0c8aac5",
+      "name": "Portfolio standard deviation copy",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "b8b799eb-1208-4e34-9f42-238269dd1015",
+            "type": "text/javascript",
+            "exec": [
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-signature",
+            "value": "{{signature}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"requests\": [\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n                {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600012\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCA00016\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCgA00016\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2000.0\n    },\n        {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCA00016\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        }\n      ],\n      \"nav\":2000.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCAg00016\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    }\n  ],\n  \"period\": \"OTHER\",\n  \"startDate\": \"2017-07-01\",\n  \"endDate\": \"2017-09-30\"\n}"
+        },
+        "url": {
+          "raw": "{{publisher}}/api/v1/models/standardDeviation/portfolio?apiKey={{api-user}}",
+          "host": [
+            "{{publisher}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "models",
+            "standardDeviation",
+            "portfolio"
+          ],
+          "query": [
+            {
+              "key": "apiKey",
+              "value": "{{api-user}}",
+              "equals": true
+            }
+          ]
+        },
+        "description": null
+      },
+      "response": []
     },
     {
       "_postman_id": "8d17c722-18aa-fb71-d0ed-954d83e4e960",
