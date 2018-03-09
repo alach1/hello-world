@@ -337,6 +337,13 @@
             }
           ],
           "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "b232302c-22fa-4a9c-a39f-3deef752f2cb",
+          "name": "Aggregates",
+          "description": "",
+          "item": [],
+          "_postman_isSubFolder": true
         }
       ]
     },
