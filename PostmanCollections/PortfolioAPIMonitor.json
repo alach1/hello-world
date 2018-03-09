@@ -468,7 +468,63 @@
       "_postman_id": "ee3576fe-3d0c-4c6a-a916-f55cf6739e0c",
       "name": "Models",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "0246c01b-5df6-cdb3-5331-164a6017fa11",
+          "name": "Portfolio ValueAtRisk copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "786718dc-8201-496c-918b-4b3971392187",
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "x-signature",
+                "value": "{{signature}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requests\": [\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLKGHM000017\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 21563.99\n        },\n                {\n          \"instrumentIdentifierValue\": \"PLNFI0600012\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600012\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCA00016\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ]\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCgA00016\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2000.0\n    },\n        {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCA00016\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 21563.99\n        }\n      ],\n      \"nav\":2000.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCAg00016\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    }\n  ],\n  \"period\":\"YEAR\"\n}"
+            },
+            "url": {
+              "raw": "{{publisher}}/api/v1/models/valueAtRisk?apiKey={{api-user}}",
+              "host": [
+                "{{publisher}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "models",
+                "valueAtRisk"
+              ],
+              "query": [
+                {
+                  "key": "apiKey",
+                  "value": "{{api-user}}",
+                  "equals": true
+                }
+              ]
+            },
+            "description": null
+          },
+          "response": []
+        }
+      ]
     },
     {
       "_postman_id": "edfe1612-c2ac-4d06-a296-d63daeb6784b",
@@ -481,61 +537,6 @@
       "name": "Mapping",
       "description": "",
       "item": []
-    },
-    {
-      "_postman_id": "0246c01b-5df6-cdb3-5331-164a6017fa11",
-      "name": "Portfolio ValueAtRisk copy",
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "id": "786718dc-8201-496c-918b-4b3971392187",
-            "type": "text/javascript",
-            "exec": [
-              "",
-              ""
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Accept",
-            "value": "application/json"
-          },
-          {
-            "key": "x-signature",
-            "value": "{{signature}}"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"requests\": [\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLKGHM000017\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 21563.99\n        },\n                {\n          \"instrumentIdentifierValue\": \"PLNFI0600012\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600012\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCA00016\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ]\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCgA00016\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2000.0\n    },\n        {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCA00016\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 21563.99\n        }\n      ],\n      \"nav\":2000.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCAg00016\",\n          \"dataSource\": \"Bankier\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    }\n  ],\n  \"period\":\"YEAR\"\n}"
-        },
-        "url": {
-          "raw": "{{publisher}}/api/v1/models/valueAtRisk?apiKey={{api-user}}",
-          "host": [
-            "{{publisher}}"
-          ],
-          "path": [
-            "api",
-            "v1",
-            "models",
-            "valueAtRisk"
-          ],
-          "query": [
-            {
-              "key": "apiKey",
-              "value": "{{api-user}}",
-              "equals": true
-            }
-          ]
-        },
-        "description": null
-      },
-      "response": []
     },
     {
       "_postman_id": "b9840625-1587-5739-4472-5512d0c8aac5",
