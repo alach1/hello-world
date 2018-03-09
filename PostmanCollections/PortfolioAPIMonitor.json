@@ -529,7 +529,7 @@
       "item": [
         {
           "_postman_id": "0246c01b-5df6-cdb3-5331-164a6017fa11",
-          "name": "Portfolio ValueAtRisk copy",
+          "name": "Portfolio ValueAtRisk",
           "event": [
             {
               "listen": "prerequest",
