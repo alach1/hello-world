@@ -753,6 +753,62 @@
             "description": null
           },
           "response": []
+        },
+        {
+          "_postman_id": "b22fb447-8c96-9a63-f627-5b40a1dbe12d",
+          "name": "Last total market value. copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "b00ce3c3-97cc-47e0-a6e4-5bd63759b9b7",
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "x-signature",
+                "value": "{{signature}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"aggregateType\": \"DAY\",\n  \"requests\": [\n      {\n        \"instrumentIdentifierValue\" : \"AT0000809058\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Bankier\"\n      }\n    ]\n}"
+            },
+            "url": {
+              "raw": "{{publisher}}/api/v1/models/totalMarketValue/last?apiKey={{api-user}}",
+              "host": [
+                "{{publisher}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "models",
+                "totalMarketValue",
+                "last"
+              ],
+              "query": [
+                {
+                  "key": "apiKey",
+                  "value": "{{api-user}}",
+                  "equals": true
+                }
+              ]
+            },
+            "description": null
+          },
+          "response": []
         }
       ]
     },
@@ -767,62 +823,6 @@
       "name": "Mapping",
       "description": "",
       "item": []
-    },
-    {
-      "_postman_id": "b22fb447-8c96-9a63-f627-5b40a1dbe12d",
-      "name": "Last total market value. copy",
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "id": "b00ce3c3-97cc-47e0-a6e4-5bd63759b9b7",
-            "type": "text/javascript",
-            "exec": [
-              "",
-              ""
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Accept",
-            "value": "application/json"
-          },
-          {
-            "key": "x-signature",
-            "value": "{{signature}}"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"aggregateType\": \"DAY\",\n  \"requests\": [\n      {\n        \"instrumentIdentifierValue\" : \"AT0000809058\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Bankier\"\n      }\n    ]\n}"
-        },
-        "url": {
-          "raw": "{{publisher}}/api/v1/models/totalMarketValue/last?apiKey={{api-user}}",
-          "host": [
-            "{{publisher}}"
-          ],
-          "path": [
-            "api",
-            "v1",
-            "models",
-            "totalMarketValue",
-            "last"
-          ],
-          "query": [
-            {
-              "key": "apiKey",
-              "value": "{{api-user}}",
-              "equals": true
-            }
-          ]
-        },
-        "description": null
-      },
-      "response": []
     },
     {
       "_postman_id": "f8ef2b6b-755c-b570-ee40-cab0e2150fc5",
