@@ -358,7 +358,15 @@
       "_postman_id": "1ab1f313-5ec0-40d1-a36b-4e6a313e169f",
       "name": "Storage",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "80fec9df-b863-413a-a05f-0dd545470b88",
+          "name": "Quotes",
+          "description": "",
+          "item": [],
+          "_postman_isSubFolder": true
+        }
+      ]
     },
     {
       "_postman_id": "ee3576fe-3d0c-4c6a-a916-f55cf6739e0c",
