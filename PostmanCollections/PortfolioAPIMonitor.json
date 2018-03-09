@@ -809,6 +809,62 @@
             "description": null
           },
           "response": []
+        },
+        {
+          "_postman_id": "f8ef2b6b-755c-b570-ee40-cab0e2150fc5",
+          "name": "Instrument Maximum Drawdown copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "7c818c7f-4b13-4e54-b2fb-c248fd457ce0",
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "x-signature",
+                "value": "{{signature}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requests\": [\n      {\n        \"instrumentIdentifierValue\" : \"AT0000809058\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Palpatine\"\n      },\n      {\n        \"instrumentIdentifierValue\" : \"AT0000827209\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Palpatine\"\n      }\n    ],\n  \"period\": \"DAY\",\n  \"endDate\": \"2016-10-17\"\n}"
+            },
+            "url": {
+              "raw": "{{publisher}}/api/v1/models/maximumDrawdown/instrument?apiKey={{api-user}}",
+              "host": [
+                "{{publisher}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "models",
+                "maximumDrawdown",
+                "instrument"
+              ],
+              "query": [
+                {
+                  "key": "apiKey",
+                  "value": "{{api-user}}",
+                  "equals": true
+                }
+              ]
+            },
+            "description": null
+          },
+          "response": []
         }
       ]
     },
@@ -823,62 +879,6 @@
       "name": "Mapping",
       "description": "",
       "item": []
-    },
-    {
-      "_postman_id": "f8ef2b6b-755c-b570-ee40-cab0e2150fc5",
-      "name": "Instrument Maximum Drawdown copy",
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "id": "7c818c7f-4b13-4e54-b2fb-c248fd457ce0",
-            "type": "text/javascript",
-            "exec": [
-              "",
-              ""
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Accept",
-            "value": "application/json"
-          },
-          {
-            "key": "x-signature",
-            "value": "{{signature}}"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"requests\": [\n      {\n        \"instrumentIdentifierValue\" : \"AT0000809058\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Palpatine\"\n      },\n      {\n        \"instrumentIdentifierValue\" : \"AT0000827209\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Palpatine\"\n      }\n    ],\n  \"period\": \"DAY\",\n  \"endDate\": \"2016-10-17\"\n}"
-        },
-        "url": {
-          "raw": "{{publisher}}/api/v1/models/maximumDrawdown/instrument?apiKey={{api-user}}",
-          "host": [
-            "{{publisher}}"
-          ],
-          "path": [
-            "api",
-            "v1",
-            "models",
-            "maximumDrawdown",
-            "instrument"
-          ],
-          "query": [
-            {
-              "key": "apiKey",
-              "value": "{{api-user}}",
-              "equals": true
-            }
-          ]
-        },
-        "description": null
-      },
-      "response": []
     }
   ],
   "event": [
