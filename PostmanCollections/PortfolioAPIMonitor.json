@@ -12,13 +12,6 @@
       "description": "Quotes descrption Andrzej",
       "item": [
         {
-          "_postman_id": "edfe1612-c2ac-4d06-a296-d63daeb6784b",
-          "name": "User",
-          "description": "",
-          "item": [],
-          "_postman_isSubFolder": true
-        },
-        {
           "_postman_id": "0c75a497-ddab-ea84-7036-b199b291bf8d",
           "name": "LastQuotes",
           "event": [
