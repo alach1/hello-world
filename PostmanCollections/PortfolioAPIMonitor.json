@@ -7,34 +7,6 @@
   },
   "item": [
     {
-      "_postman_id": "99367aaa-93e4-6af5-a184-c200e40a57f5",
-      "name": "Quotes",
-      "description": "Quotes descrption Andrzej",
-      "item": [],
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "id": "812c9787-8b1b-43ee-be5a-5b8bf508c2ef",
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ]
-          }
-        },
-        {
-          "listen": "test",
-          "script": {
-            "id": "bb97ad3d-ed0e-4d3c-97d2-c254045ad8a7",
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ]
-          }
-        }
-      ]
-    },
-    {
       "_postman_id": "1ab1f313-5ec0-40d1-a36b-4e6a313e169f",
       "name": "Storage",
       "description": "",
