@@ -584,7 +584,7 @@
         },
         {
           "_postman_id": "b9840625-1587-5739-4472-5512d0c8aac5",
-          "name": "Portfolio standard deviation copy",
+          "name": "Portfolio standard deviation",
           "event": [
             {
               "listen": "prerequest",
