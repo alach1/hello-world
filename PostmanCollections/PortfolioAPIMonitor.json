@@ -464,7 +464,7 @@
         },
         {
           "_postman_id": "2ca2221e-a757-210f-3993-c546bc17a2fc",
-          "name": "Rate of return copy",
+          "name": "Rate of return",
           "event": [
             {
               "listen": "prerequest",
