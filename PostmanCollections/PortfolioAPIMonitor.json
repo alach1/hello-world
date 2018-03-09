@@ -1,8 +1,8 @@
 {
   "info": {
-    "name": "Portfolio API - Monitor",
     "_postman_id": "af139f57-1e89-448e-052b-ca96e5afc204",
-    "description": "# Introduction\nWhat does your API do? NIC\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+    "name": "Portfolio API - Monitor",
+    "description": "Portfolio API Monitoring",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -515,8 +515,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": null
+            }
           },
           "response": []
         }
@@ -577,8 +576,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": null
+            }
           },
           "response": []
         },
@@ -637,8 +635,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": null
+            }
           },
           "response": []
         },
@@ -693,8 +690,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": null
+            }
           },
           "response": []
         },
@@ -749,8 +745,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": null
+            }
           },
           "response": []
         },
@@ -805,8 +800,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": null
+            }
           },
           "response": []
         },
@@ -861,8 +855,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": null
+            }
           },
           "response": []
         }
