@@ -172,7 +172,7 @@
         },
         {
           "_postman_id": "67aefd62-e485-554b-7874-c0188be3aeb7",
-          "name": "PastQuotes copy",
+          "name": "PastQuotes",
           "event": [
             {
               "listen": "prerequest",
