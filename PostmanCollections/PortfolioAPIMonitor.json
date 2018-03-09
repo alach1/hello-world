@@ -812,7 +812,7 @@
         },
         {
           "_postman_id": "f8ef2b6b-755c-b570-ee40-cab0e2150fc5",
-          "name": "Instrument Maximum Drawdown copy",
+          "name": "Instrument Maximum Drawdown",
           "event": [
             {
               "listen": "prerequest",
