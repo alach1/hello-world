@@ -355,6 +355,12 @@
       ]
     },
     {
+      "_postman_id": "1ab1f313-5ec0-40d1-a36b-4e6a313e169f",
+      "name": "Storage",
+      "description": "",
+      "item": []
+    },
+    {
       "_postman_id": "1ed6249e-24ed-ff14-e735-4a8660d86ceb",
       "name": "LastAggregates copy",
       "event": [
