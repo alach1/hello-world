@@ -644,7 +644,7 @@
         },
         {
           "_postman_id": "8d17c722-18aa-fb71-d0ed-954d83e4e960",
-          "name": "Portfolio Liquidity copy",
+          "name": "Portfolio Liquidity",
           "event": [
             {
               "listen": "prerequest",
