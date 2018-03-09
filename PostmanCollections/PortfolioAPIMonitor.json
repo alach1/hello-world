@@ -461,64 +461,6 @@
             }
           ],
           "_postman_isSubFolder": true
-        },
-        {
-          "_postman_id": "2ca2221e-a757-210f-3993-c546bc17a2fc",
-          "name": "Rate of return",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "b44ef034-cadd-453d-82ae-3afc9a841b0f",
-                "type": "text/javascript",
-                "exec": [
-                  "postman.setEnvironmentVariable(\"periodParam\", \"DAY\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "key": "x-signature",
-                "value": "{{signature}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"requests\": [\n      {\n        \"instrumentIdentifierValue\" : \"PLKGHM000017\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"GPW\"\n      },\n      {\n        \"instrumentIdentifierValue\": \"AT0000827209\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"GPW\"\n      }\n    ],\n  \"period\": \"{{periodParam}}\",\n  \"endDate\": \"2017-09-18\"\n}"
-            },
-            "url": {
-              "raw": "{{publisher}}/api/v1/models/rateOfReturn?apiKey={{api-user}}",
-              "host": [
-                "{{publisher}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "models",
-                "rateOfReturn"
-              ],
-              "query": [
-                {
-                  "key": "apiKey",
-                  "value": "{{api-user}}",
-                  "equals": true
-                }
-              ]
-            },
-            "description": null
-          },
-          "response": []
         }
       ]
     },
@@ -529,7 +471,7 @@
       "item": [
         {
           "_postman_id": "0246c01b-5df6-cdb3-5331-164a6017fa11",
-          "name": "Portfolio ValueAtRisk",
+          "name": "Portfolio ValueAtRisk copy",
           "event": [
             {
               "listen": "prerequest",
@@ -581,290 +523,6 @@
             "description": null
           },
           "response": []
-        },
-        {
-          "_postman_id": "b9840625-1587-5739-4472-5512d0c8aac5",
-          "name": "Portfolio standard deviation",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "b8b799eb-1208-4e34-9f42-238269dd1015",
-                "type": "text/javascript",
-                "exec": [
-                  "",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "x-signature",
-                "value": "{{signature}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"requests\": [\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n                {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600012\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCA00016\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCgA00016\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2000.0\n    },\n        {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCA00016\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        }\n      ],\n      \"nav\":2000.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCAg00016\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    }\n  ],\n  \"period\": \"OTHER\",\n  \"startDate\": \"2017-07-01\",\n  \"endDate\": \"2017-09-30\"\n}"
-            },
-            "url": {
-              "raw": "{{publisher}}/api/v1/models/standardDeviation/portfolio?apiKey={{api-user}}",
-              "host": [
-                "{{publisher}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "models",
-                "standardDeviation",
-                "portfolio"
-              ],
-              "query": [
-                {
-                  "key": "apiKey",
-                  "value": "{{api-user}}",
-                  "equals": true
-                }
-              ]
-            },
-            "description": null
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "8d17c722-18aa-fb71-d0ed-954d83e4e960",
-          "name": "Portfolio Liquidity",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "9885e6b4-a82a-4537-a667-7a048584aa95",
-                "type": "text/javascript",
-                "exec": [
-                  "",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "key": "x-signature",
-                "value": "{{signature}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"requests\": [\n    {\n      \"instruments\":[\n        {\n          \"instrumentIdentifierValue\": \"PLKGHM000017\",\n          \"exchangeIdentifierValue\":\"XWAR\",\n          \"dataSource\": \"GPW\",\n\n        \"quantity\": 100,\n        \"expertLiquidity\": 50,\n        \"maturityDate\": \"2017-03-15\"\n        },\n        {\n\n          \"instrumentIdentifierValue\": \"AT0000827209\",\n          \"exchangeIdentifierValue\":\"XWAR\",\n          \"dataSource\": \"Palpatine\",\n\n        \"quantity\": 40,\n        \"expertLiquidity\": 45\n        },\n        {\n\n          \"instrumentIdentifierValue\": \"AT00BUWOG001\",\n          \"exchangeIdentifierValue\":\"XWAR\",\n          \"dataSource\": \"Palpatine\",\n\n        \"quantity\": -200,\n        \"expertLiquidity\": 12\n        },\n        {\n\n          \"instrumentIdentifierValue\": \"AU000000PDZ2\",\n          \"exchangeIdentifierValue\":\"XWAR\",\n          \"dataSource\": \"Palpatine\",\n\n        \"quantity\": 3000,\n        \"expertLiquidity\":90,\n        \"maturityDate\": \"2018-01-01\"\n        }\n      ],\n    \"volumeRatio\": 0.3,\n    \"portfolioNav\": 18000\n    }\n    ],\n    \"calculationDate\":\"2017-02-13\",\n    \"volumePeriodName\":\"DAY\"\n}"
-            },
-            "url": {
-              "raw": "{{publisher}}/api/v1/models/liquidity/portfolio?apiKey={{api-user}}",
-              "host": [
-                "{{publisher}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "models",
-                "liquidity",
-                "portfolio"
-              ],
-              "query": [
-                {
-                  "key": "apiKey",
-                  "value": "{{api-user}}",
-                  "equals": true
-                }
-              ]
-            },
-            "description": null
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "f038c6c9-edf5-589d-9fab-6f66e667b093",
-          "name": "Past total market value",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "e36390ab-4d20-43f8-b9ea-802552f8989a",
-                "type": "text/javascript",
-                "exec": [
-                  "",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "key": "x-signature",
-                "value": "{{signature}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{  \"endDate\":\"2017-12-12T00:00:00Z\",\n  \"startDate\": \"2016-01-01T00:00:00Z\",\n  \"aggregateType\": \"DAY\",\n  \"requests\": [\n      {\n        \"instrumentIdentifierValue\" : \"AT0000809058\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Palpatine\"\n      }\n    ]\n}"
-            },
-            "url": {
-              "raw": "{{publisher}}/api/v1/models/totalMarketValue/past?apiKey={{api-user}}",
-              "host": [
-                "{{publisher}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "models",
-                "totalMarketValue",
-                "past"
-              ],
-              "query": [
-                {
-                  "key": "apiKey",
-                  "value": "{{api-user}}",
-                  "equals": true
-                }
-              ]
-            },
-            "description": null
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "b22fb447-8c96-9a63-f627-5b40a1dbe12d",
-          "name": "Last total market value. copy",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "b00ce3c3-97cc-47e0-a6e4-5bd63759b9b7",
-                "type": "text/javascript",
-                "exec": [
-                  "",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "key": "x-signature",
-                "value": "{{signature}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"aggregateType\": \"DAY\",\n  \"requests\": [\n      {\n        \"instrumentIdentifierValue\" : \"AT0000809058\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Bankier\"\n      }\n    ]\n}"
-            },
-            "url": {
-              "raw": "{{publisher}}/api/v1/models/totalMarketValue/last?apiKey={{api-user}}",
-              "host": [
-                "{{publisher}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "models",
-                "totalMarketValue",
-                "last"
-              ],
-              "query": [
-                {
-                  "key": "apiKey",
-                  "value": "{{api-user}}",
-                  "equals": true
-                }
-              ]
-            },
-            "description": null
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "f8ef2b6b-755c-b570-ee40-cab0e2150fc5",
-          "name": "Instrument Maximum Drawdown copy",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "7c818c7f-4b13-4e54-b2fb-c248fd457ce0",
-                "type": "text/javascript",
-                "exec": [
-                  "",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "key": "x-signature",
-                "value": "{{signature}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"requests\": [\n      {\n        \"instrumentIdentifierValue\" : \"AT0000809058\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Palpatine\"\n      },\n      {\n        \"instrumentIdentifierValue\" : \"AT0000827209\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Palpatine\"\n      }\n    ],\n  \"period\": \"DAY\",\n  \"endDate\": \"2016-10-17\"\n}"
-            },
-            "url": {
-              "raw": "{{publisher}}/api/v1/models/maximumDrawdown/instrument?apiKey={{api-user}}",
-              "host": [
-                "{{publisher}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "models",
-                "maximumDrawdown",
-                "instrument"
-              ],
-              "query": [
-                {
-                  "key": "apiKey",
-                  "value": "{{api-user}}",
-                  "equals": true
-                }
-              ]
-            },
-            "description": null
-          },
-          "response": []
         }
       ]
     },
@@ -879,6 +537,348 @@
       "name": "Mapping",
       "description": "",
       "item": []
+    },
+    {
+      "_postman_id": "b9840625-1587-5739-4472-5512d0c8aac5",
+      "name": "Portfolio standard deviation copy",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "b8b799eb-1208-4e34-9f42-238269dd1015",
+            "type": "text/javascript",
+            "exec": [
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-signature",
+            "value": "{{signature}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"requests\": [\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n                {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600012\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCA00016\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLNFI0600010\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        },\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCgA00016\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2000.0\n    },\n        {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCA00016\",\n          \"exchangeIdentifierValue\": \"XWAR\",\n          \"dataSource\": \"GPW\",\n          \"value\": 21563.99\n        }\n      ],\n      \"nav\":2000.0\n    },\n    {\n      \"instruments\": [\n        {\n          \"instrumentIdentifierValue\": \"PLDEBCAg00016\",\n          \"dataSource\": \"GPW\",\n          \"value\": 30522.2,\n          \"exchangeIdentifierValue\": \"XWAR\"\n        }\n      ],\n      \"nav\":2.0\n    }\n  ],\n  \"period\": \"OTHER\",\n  \"startDate\": \"2017-07-01\",\n  \"endDate\": \"2017-09-30\"\n}"
+        },
+        "url": {
+          "raw": "{{publisher}}/api/v1/models/standardDeviation/portfolio?apiKey={{api-user}}",
+          "host": [
+            "{{publisher}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "models",
+            "standardDeviation",
+            "portfolio"
+          ],
+          "query": [
+            {
+              "key": "apiKey",
+              "value": "{{api-user}}",
+              "equals": true
+            }
+          ]
+        },
+        "description": null
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "8d17c722-18aa-fb71-d0ed-954d83e4e960",
+      "name": "Portfolio Liquidity copy",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "9885e6b4-a82a-4537-a667-7a048584aa95",
+            "type": "text/javascript",
+            "exec": [
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "x-signature",
+            "value": "{{signature}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"requests\": [\n    {\n      \"instruments\":[\n        {\n          \"instrumentIdentifierValue\": \"PLKGHM000017\",\n          \"exchangeIdentifierValue\":\"XWAR\",\n          \"dataSource\": \"GPW\",\n\n        \"quantity\": 100,\n        \"expertLiquidity\": 50,\n        \"maturityDate\": \"2017-03-15\"\n        },\n        {\n\n          \"instrumentIdentifierValue\": \"AT0000827209\",\n          \"exchangeIdentifierValue\":\"XWAR\",\n          \"dataSource\": \"Palpatine\",\n\n        \"quantity\": 40,\n        \"expertLiquidity\": 45\n        },\n        {\n\n          \"instrumentIdentifierValue\": \"AT00BUWOG001\",\n          \"exchangeIdentifierValue\":\"XWAR\",\n          \"dataSource\": \"Palpatine\",\n\n        \"quantity\": -200,\n        \"expertLiquidity\": 12\n        },\n        {\n\n          \"instrumentIdentifierValue\": \"AU000000PDZ2\",\n          \"exchangeIdentifierValue\":\"XWAR\",\n          \"dataSource\": \"Palpatine\",\n\n        \"quantity\": 3000,\n        \"expertLiquidity\":90,\n        \"maturityDate\": \"2018-01-01\"\n        }\n      ],\n    \"volumeRatio\": 0.3,\n    \"portfolioNav\": 18000\n    }\n    ],\n    \"calculationDate\":\"2017-02-13\",\n    \"volumePeriodName\":\"DAY\"\n}"
+        },
+        "url": {
+          "raw": "{{publisher}}/api/v1/models/liquidity/portfolio?apiKey={{api-user}}",
+          "host": [
+            "{{publisher}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "models",
+            "liquidity",
+            "portfolio"
+          ],
+          "query": [
+            {
+              "key": "apiKey",
+              "value": "{{api-user}}",
+              "equals": true
+            }
+          ]
+        },
+        "description": null
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "f038c6c9-edf5-589d-9fab-6f66e667b093",
+      "name": "Past total market value. copy",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "e36390ab-4d20-43f8-b9ea-802552f8989a",
+            "type": "text/javascript",
+            "exec": [
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "x-signature",
+            "value": "{{signature}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{  \"endDate\":\"2017-12-12T00:00:00Z\",\n  \"startDate\": \"2016-01-01T00:00:00Z\",\n  \"aggregateType\": \"DAY\",\n  \"requests\": [\n      {\n        \"instrumentIdentifierValue\" : \"AT0000809058\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Palpatine\"\n      }\n    ]\n}"
+        },
+        "url": {
+          "raw": "{{publisher}}/api/v1/models/totalMarketValue/past?apiKey={{api-user}}",
+          "host": [
+            "{{publisher}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "models",
+            "totalMarketValue",
+            "past"
+          ],
+          "query": [
+            {
+              "key": "apiKey",
+              "value": "{{api-user}}",
+              "equals": true
+            }
+          ]
+        },
+        "description": null
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "b22fb447-8c96-9a63-f627-5b40a1dbe12d",
+      "name": "Last total market value. copy",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "b00ce3c3-97cc-47e0-a6e4-5bd63759b9b7",
+            "type": "text/javascript",
+            "exec": [
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "x-signature",
+            "value": "{{signature}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"aggregateType\": \"DAY\",\n  \"requests\": [\n      {\n        \"instrumentIdentifierValue\" : \"AT0000809058\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Bankier\"\n      }\n    ]\n}"
+        },
+        "url": {
+          "raw": "{{publisher}}/api/v1/models/totalMarketValue/last?apiKey={{api-user}}",
+          "host": [
+            "{{publisher}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "models",
+            "totalMarketValue",
+            "last"
+          ],
+          "query": [
+            {
+              "key": "apiKey",
+              "value": "{{api-user}}",
+              "equals": true
+            }
+          ]
+        },
+        "description": null
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "f8ef2b6b-755c-b570-ee40-cab0e2150fc5",
+      "name": "Instrument Maximum Drawdown copy",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "7c818c7f-4b13-4e54-b2fb-c248fd457ce0",
+            "type": "text/javascript",
+            "exec": [
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "x-signature",
+            "value": "{{signature}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"requests\": [\n      {\n        \"instrumentIdentifierValue\" : \"AT0000809058\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Palpatine\"\n      },\n      {\n        \"instrumentIdentifierValue\" : \"AT0000827209\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"Palpatine\"\n      }\n    ],\n  \"period\": \"DAY\",\n  \"endDate\": \"2016-10-17\"\n}"
+        },
+        "url": {
+          "raw": "{{publisher}}/api/v1/models/maximumDrawdown/instrument?apiKey={{api-user}}",
+          "host": [
+            "{{publisher}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "models",
+            "maximumDrawdown",
+            "instrument"
+          ],
+          "query": [
+            {
+              "key": "apiKey",
+              "value": "{{api-user}}",
+              "equals": true
+            }
+          ]
+        },
+        "description": null
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "2ca2221e-a757-210f-3993-c546bc17a2fc",
+      "name": "Rate of return copy",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "b44ef034-cadd-453d-82ae-3afc9a841b0f",
+            "type": "text/javascript",
+            "exec": [
+              "postman.setEnvironmentVariable(\"periodParam\", \"DAY\");"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "x-signature",
+            "value": "{{signature}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"requests\": [\n      {\n        \"instrumentIdentifierValue\" : \"PLKGHM000017\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"GPW\"\n      },\n      {\n        \"instrumentIdentifierValue\": \"AT0000827209\",\n        \"exchangeIdentifierValue\":\"XWAR\",\n        \"dataSource\": \"GPW\"\n      }\n    ],\n  \"period\": \"{{periodParam}}\",\n  \"endDate\": \"2017-09-18\"\n}"
+        },
+        "url": {
+          "raw": "{{publisher}}/api/v1/models/rateOfReturn?apiKey={{api-user}}",
+          "host": [
+            "{{publisher}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "models",
+            "rateOfReturn"
+          ],
+          "query": [
+            {
+              "key": "apiKey",
+              "value": "{{api-user}}",
+              "equals": true
+            }
+          ]
+        },
+        "description": null
+      },
+      "response": []
     }
   ],
   "event": [
