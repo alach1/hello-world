@@ -403,7 +403,7 @@
             },
             {
               "_postman_id": "e487c48f-75d8-9b8b-eb37-f99f4bf0b972",
-              "name": "PastAggregates copy",
+              "name": "PastAggregates",
               "event": [
                 {
                   "listen": "prerequest",
